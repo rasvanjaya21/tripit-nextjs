@@ -1,6 +1,4 @@
 import Image from "next/image";
-import React from "react";
-
 function Weather() {
 	return (
 		<div className="bg-tripit h-52 rounded-2xl">
