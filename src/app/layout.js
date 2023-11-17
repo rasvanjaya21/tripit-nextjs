@@ -1,20 +1,22 @@
-import { Inter } from "next/font/google";
+import { Sora as Font } from "next/font/google";
 import "@/styles/globals.css";
+import SideBar from "@/components/sidebar/sidebar";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Font({ subsets: ["latin"] });
 
 export const metadata = {
-	title: "Hello World",
+	title: "Tripit - Free Dashboard UI",
 	description: "sic linea codice creatus est",
 };
 
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
-				<main className="flex min-h-screen flex-col items-center justify-between p-24">
-					{children}
-				</main>
+			<body className={font.className}>
+				<div>
+					<SideBar />
+				</div>
+				<main className="flex h-screen flex-col pl-96 pt-6">{children}</main>
 			</body>
 		</html>
 	);
