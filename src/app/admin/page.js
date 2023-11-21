@@ -6,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 import HeaderSearchBar from "@/components/header/header-search-bar";
 import HeaderAccount from "@/components/header/header-account";
+import Featured from "@/components/featured/featured";
 
 function Admin() {
 	const [currentData, setCurrentData] = useState(datasFromAPI[0]);
@@ -36,7 +37,9 @@ function Admin() {
 			<div className="flex gap-5">
 				<div className="flex flex-col h-fit w-10/12 gap-5">
 					<div className="flex gap-5 w-full">
-						<div className="bg-pink-700 w-8/12 h-80">3</div>
+						<div className="w-8/12 h-fit">
+							<Featured name={currentData.name} tripImage={currentData.tripImage} onClickPrev={(event) => {prevPage()}} onClickNext={nextPage}/>
+						</div>
 						<div className="bg-pink-700 w-4/12 h-80">4</div>
 					</div>
 					<div className="flex gap-5 w-full">
