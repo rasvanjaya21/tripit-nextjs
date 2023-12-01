@@ -4,7 +4,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 function Calendar({ timelineMonth, timelineDate, timelineSuggestedDate, timelineRecommendedDate }) {
 	return (
-		<div className="flex flex-col pt-6">
+		<div className="flex flex-col pt-6 -mb-2">
 			<div className="flex justify-between pb-10 items-center">
 				<div className="font-bold text-[32px] text-[#27292C]">Timeline</div>
 				<button className="font-semibold text-base bg-[#27292C] text-white px-8 py-3 rounded-2xl flex items-center gap-2">

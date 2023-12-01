@@ -13,6 +13,7 @@ import TravelDateCard from "@/components/travel-date-card/travel-date-card";
 import PeopleCard from "@/components/people-card/people-card";
 import DestinationCard from "@/components/destination-card/destination-card";
 import Map from "@/components/map/map";
+import Todos from "@/components/todos/todos";
 
 function Admin() {
 	const [currentData, setCurrentData] = useState(datasFromAPI[0]);
@@ -92,7 +93,9 @@ function Admin() {
 					<div className="bg-transparent w-2/5 h-[508px]">
 						<Map mapImage={currentData.mapImage} />
 					</div>
-					<div className="bg-pink-700 w-full h-[508px]">10</div>
+					<div className="bg-transparent w-full h-[508px]">
+						<Todos listTodos={currentData.todos}/>
+					</div>
 				</div>
 				<div className="bg-white h-fit w-4/12">
 					<div className="bg-pink-700 w-full h-[528px]">11</div>
