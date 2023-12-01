@@ -8,6 +8,7 @@ import HeaderSearchBar from "@/components/header/header-search-bar";
 import HeaderAccount from "@/components/header/header-account";
 import Featured from "@/components/featured/featured";
 import Chart from "@/components/chart/chart";
+import Calendar from "@/components/calendar/calendar";
 
 function Admin() {
 	const [currentData, setCurrentData] = useState(datasFromAPI[0]);
@@ -37,7 +38,7 @@ function Admin() {
 			</div>
 			<div className="flex gap-5">
 				<div className="flex flex-col h-fit w-10/12 gap-5">
-					<div className="flex gap-12 w-full">
+					<div className="flex gap-6 w-full">
 						<div className="w-8/12 h-fit">
 							<Featured
 								name={currentData.name}
@@ -58,8 +59,15 @@ function Admin() {
 						<div className="bg-pink-700 w-full h-48">8</div>
 					</div>
 				</div>
-				<div className="bg-white h-fit w-4/12">
-					<div className="bg-pink-700 w-full h-[532px]">5</div>
+				<div className="h-fit w-4/12">
+					<div className="w-full h-[532px]">
+						<Calendar
+							timelineMonth={currentData.timelineMonth}
+							timelineDate={currentData.timelineDate}
+							timelineSuggestedDate={currentData.timelineSuggestedDate}
+							timelineRecommendedDate={currentData.timelineRecommendedDate}
+						/>
+					</div>
 				</div>
 			</div>
 			<div className="flex gap-5">
