@@ -14,10 +14,10 @@ import PeopleCard from "@/components/people-card/people-card";
 import DestinationCard from "@/components/destination-card/destination-card";
 import Map from "@/components/map/map";
 import Todos from "@/components/todos/todos";
+import Timeline from "@/components/timeline/timeline";
 
 function Admin() {
 	const [currentData, setCurrentData] = useState(datasFromAPI[0]);
-	console.log(datasFromAPI);
 
 	function prevPage() {
 		setCurrentData(datasFromAPI[0]);
@@ -97,8 +97,10 @@ function Admin() {
 						<Todos listTodos={currentData.todos}/>
 					</div>
 				</div>
-				<div className="bg-white h-fit w-4/12">
-					<div className="bg-pink-700 w-full h-[528px]">11</div>
+				<div className="h-fit w-4/12">
+					<div className="bg-transparent w-full h-[528px]">
+						<Timeline timelineImage={currentData.timelineImage}/>
+					</div>
 				</div>
 			</div>
 		</div>
