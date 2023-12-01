@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 
 function SideBar() {
 	const segment = useSelectedLayoutSegment();
-	console.log(segment);
 	return (
 		<div className="p-6 fixed h-screen text-black ">
 			<div className="bg-white h-full rounded-2xl p-6 flex flex-col">
