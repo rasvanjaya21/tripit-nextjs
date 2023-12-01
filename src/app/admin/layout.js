@@ -4,7 +4,7 @@ function AdminLayout({ children }) {
 	return (
 		<div>
 			<SideBar />
-			<main className="flex h-screen flex-col pl-10 lg:pl-[355px] pr-10 pt-6">
+			<main className="flex h-screen flex-col pl-[355px] pr-10 pt-6">
 				{children}
 			</main>
 		</div>

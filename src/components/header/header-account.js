@@ -5,7 +5,7 @@ import Image from "next/image";
 function HeaderAccount() {
 	return (
 		<div className="flex justify-between">
-			<div className="flex gap-10 items-center">
+			<div className="flex gap-8 items-center">
 				<Image
 					priority
 					src={"/assets/flag-uk.svg"}
@@ -16,13 +16,13 @@ function HeaderAccount() {
 				<Image
 					priority
 					src={"/assets/notification-icon.svg"}
-					height={28}
-					width={28}
+					height={32}
+					width={32}
 					alt=""
 				/>
 			</div>
 			<div className="flex items-center gap-5">
-				<div className="text-[#27292C]">Nick McMilan</div>
+				<div className="text-base text-[#27292C]">Nick McMilan</div>
 				<Image
 					priority
 					src={"/assets/avatar-nick.svg"}

@@ -5,27 +5,35 @@ import Image from "next/image";
 
 function Featured({ name, tripImage, onClickPrev, onClickNext }) {
 	return (
-		<div className="relative rounded-2xl">
-			<Image
+		<div className="relative rounded-2xl pt-6">
+			{/* <Image
 				alt=""
 				loading="lazy"
 				src={tripImage}
 				height={329}
 				width={765}
-				className="relative w-full h-full bg-contain"
-			/>
+				className="relative h-20"
+			/> */}
 
-			<div className="absolute left-10 top-[67px]">
+			<div
+				className={cn(
+					name == datasFromAPI[0].name ? "bg-[#FEECCF]" : "bg-[#CFEDFE]",
+					"bg-contain bg-right-bottom bg-no-repeat font-semibold rounded-2xl h-[270px] w-full"
+					)}
+				style={{ backgroundImage: `url(${tripImage})` }}
+			></div>
+
+			<div className="absolute left-10 top-16">
 				<div className="font-semibold pb-5">Nearest trip</div>
-				<div className="text-5xl 2xl:text-7xl font-bold pb-4 2xl:pb-7">
+				<div className="text-7xl font-bold pb-20">
 					{name}
 				</div>
-				<div className="flex p-2 pl-0 pt-0 text-xs 2xl:text-xl">
+				<div className="absolute bottom-0 flex p-2 pb-6 pl-0 pt-0 text-xl">
 					<button
 						disabled={name === datasFromAPI[0].name}
 						className={cn(
 							name === datasFromAPI[0].name ? "bg-transparent" : "bg-white",
-							"p-2 2xl:p-4 rounded-full"
+							"p-4 rounded-full"
 						)}
 						onClick={onClickPrev}
 					>
@@ -35,7 +43,7 @@ function Featured({ name, tripImage, onClickPrev, onClickNext }) {
 						disabled={name === datasFromAPI[1].name}
 						className={cn(
 							name === datasFromAPI[1].name ? "bg-transparent" : "bg-white",
-							"p-2 2xl:p-4 rounded-full"
+							"p-4 rounded-full"
 						)}
 						onClick={onClickNext}
 					>
