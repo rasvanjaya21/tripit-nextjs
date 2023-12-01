@@ -54,7 +54,7 @@ function Admin() {
 						</div>
 					</div>
 					<div className="flex gap-5 w-full">
-						<div className="bg-pink-700 w-6/12 h-48">6</div>
+						<div className="bg-pink-700 w-7/12 h-48">6</div>
 						<div className="bg-pink-700 w-7/12 h-48">7</div>
 						<div className="bg-pink-700 w-full h-48">8</div>
 					</div>

@@ -25,7 +25,7 @@ function Featured({ name, tripImage, onClickPrev, onClickNext }) {
 
 			<div className="absolute left-10 top-16">
 				<div className="font-semibold pb-5">Nearest trip</div>
-				<div className="text-7xl font-bold pb-20">
+				<div className="text-7xl font-bold pb-28">
 					{name}
 				</div>
 				<div className="absolute bottom-0 flex p-2 pb-6 pl-0 pt-0 text-xl">
