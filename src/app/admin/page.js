@@ -9,6 +9,9 @@ import HeaderAccount from "@/components/header/header-account";
 import Featured from "@/components/featured/featured";
 import Chart from "@/components/chart/chart";
 import Calendar from "@/components/calendar/calendar";
+import TravelDateCard from "@/components/travel-date-card/travel-date-card";
+import PeopleCard from "@/components/people-card/people-card";
+import DestinationCard from "@/components/destination-card/destination-card";
 
 function Admin() {
 	const [currentData, setCurrentData] = useState(datasFromAPI[0]);
@@ -54,13 +57,26 @@ function Admin() {
 						</div>
 					</div>
 					<div className="flex gap-5 w-full">
-						<div className="bg-pink-700 w-7/12 h-48">6</div>
-						<div className="bg-pink-700 w-7/12 h-48">7</div>
-						<div className="bg-pink-700 w-full h-48">8</div>
+						<div className="bg-white w-4/6 h-44 rounded-2xl">
+							<TravelDateCard
+								totalTravelDate={currentData.totalTravelDate}
+								startTravelDate={currentData.startTravelDate}
+								endTravelDate={currentData.endTravelDate}
+							/>
+						</div>
+						<div className="bg-white w-4/6 h-44 rounded-2xl">
+							<PeopleCard />
+						</div>
+						<div className="bg-white w-full h-44 rounded-2xl">
+							<DestinationCard
+								endDestination={currentData.endDestination}
+								durationDestination={currentData.durationDestination}
+							/>
+						</div>
 					</div>
 				</div>
 				<div className="h-fit w-4/12">
-					<div className="w-full h-[532px]">
+					<div className="w-full h-fit">
 						<Calendar
 							timelineMonth={currentData.timelineMonth}
 							timelineDate={currentData.timelineDate}

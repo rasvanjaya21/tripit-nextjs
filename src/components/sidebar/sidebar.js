@@ -42,7 +42,6 @@ function SideBar() {
 							"flex gap-4 p-4 items-center font-semibold hover:bg-tripit hover:rounded-2xl hover:cursor-pointer my-1"
 						)}
 					>
-						{/* <Image priority src={item.icon} height={24} width={24} alt="" className="text-blue-100"/> */}
 						<item.icon />
 						<div>{item.name}</div>
 					</Link>

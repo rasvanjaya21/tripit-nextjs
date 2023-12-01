@@ -19,9 +19,6 @@ function Calendar({ timelineMonth, timelineDate, timelineSuggestedDate, timeline
 					<HiOutlineChevronRight className="text-[#27292C]"/>
 				</div>
 			</div>
-			{/* <div className="grid grid-cols-7">{shortDay.map((item) => (
-				item.name
-			))}</div> */}
 			<div className="grid grid-cols-7 justify-items-center pb-2">
 				{shortDay.map((item) => (
 					<div key={item.name} className="text-[#9AA2AC]">

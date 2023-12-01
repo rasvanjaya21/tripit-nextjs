@@ -6,15 +6,6 @@ import Image from "next/image";
 function Featured({ name, tripImage, onClickPrev, onClickNext }) {
 	return (
 		<div className="relative rounded-2xl pt-6">
-			{/* <Image
-				alt=""
-				loading="lazy"
-				src={tripImage}
-				height={329}
-				width={765}
-				className="relative h-20"
-			/> */}
-
 			<div
 				className={cn(
 					name == datasFromAPI[0].name ? "bg-[#FEECCF]" : "bg-[#CFEDFE]",

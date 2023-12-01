@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { TbLocationFilled } from "react-icons/tb";
+
 function Weather() {
 	return (
 		<div className="bg-tripit h-52 rounded-2xl">
@@ -15,26 +18,12 @@ function Weather() {
 						<div>
 							<div className="font-bold text-4xl">30°</div>
 							<div className="flex gap-4 items-center font-semibold">
-								<Image
-									priority
-									src={"/assets/location-icon.svg"}
-									height={9}
-									width={9}
-									alt=""
-								/>
+								<TbLocationFilled className="h-3 w-3 text-[#1D85FF]" />
 								<div className="font-semibold text-sm text-[#1D85FF]">Rome</div>
 							</div>
 						</div>
 					</div>
-					<div>
-						<Image
-							priority
-							src={"/assets/weather-menu-icon.svg"}
-							height={19}
-							width={4}
-							alt=""
-						/>
-					</div>
+					<BsThreeDotsVertical className="text-[#6B7178]" />
 				</div>
 				<div className="grid grid-cols-5 place-items-center pt-6">
 					<Image
